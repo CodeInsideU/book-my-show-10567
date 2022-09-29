@@ -1,3 +1,172 @@
+# Book-My-Show-10567
+
+Built clone of BookMyShow ticket booking site using Javascript, React.js, Node.js and MovieDB API.
+This website is used to purchase movie tickets. It displays the most recent theatrical releases and allows users to purchase tickets.
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /movie
+```
+
+| Parameter | Type     | Description                      |
+| :-------- | :------- | :------------------------------- |
+| `api_key` | `string` | 43f249322f1bb49e1dafd4e1d14d2b72 |
+
+#### Get item
+
+```http
+  GET /movie/popular
+```
+
+| Parameter | Type     | Description |
+| :-------- | :------- | :---------- |
+| `id`      | `string` | popular     |
+
+```http
+  GET /movie/top_rated
+```
+
+| Parameter | Type     | Description |
+| :-------- | :------- | :---------- |
+| `id`      | `string` | top_rated   |
+
+```http
+  GET /movie/upcoming
+```
+
+| Parameter | Type     | Description |
+| :-------- | :------- | :---------- |
+| `id`      | `string` | upcoming    |
+
+```http
+  GET /movie/{movie_id}/credits
+```
+
+| Parameter | Type     | Description        |
+| :-------- | :------- | :----------------- |
+| `id`      | `string` | {movie_id}/credits |
+
+```http
+  GET /movie/{movie_id}/similar
+```
+
+| Parameter | Type     | Description        |
+| :-------- | :------- | :----------------- |
+| `id`      | `string` | {movie_id}/similar |
+
+```http
+  GET /movie/{movie_id}/recommendations
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `string` | {movie_id}/recommendations |
+
+```http
+  GET /movie/{movie_id}
+```
+
+| Parameter | Type     | Description       |
+| :-------- | :------- | :---------------- |
+| `id`      | `string` | /movie/{movie_id} |
+
+### API Documentation link
+
+https://developers.themoviedb.org/3/getting-started/introduction
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+
+Install create-react-app with npx
+
+```bash
+  npx install create-react-app
+```
+
+Install react-router-dom with npm
+
+```bash
+  npm install react-router-dom
+```
+
+Install tailwindcss via npm, and create your tailwind.config.js file.
+
+```bash
+  npm install -D tailwindcss
+  npx tailwindcss init
+```
+
+Add the paths to all of your template files in your tailwind.config.js file.
+
+```bash
+  /** @type {import('tailwindcss').Config} */
+  module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
+
+```bash
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}
+```
+
+## Appendix
+
+### Components
+
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+- Cast_Component
+- EntertainmentCard_Component
+- Arrow_Component
+- HeroCarousel_Component
+- MovieHero_Component
+- MovieInfo_Component
+- MovieNavbar_Component
+- Navbar_Component
+- Payment_Component
+- PlayFilters_Component
+- Poster_Component
+- PosterSlider_Component
+
+### Context
+
+Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
+
+- Movie_Context
+
+### Layout
+
+The Layout component is a component that you create to provide common elements across all of your pages.
+
+- Default.layout
+- Movie.layout
+
+### Pages
+
+A page component uses other components to assemble the page like lego blocks.
+
+- Home_page
+- Movie_page
+- Play_page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
